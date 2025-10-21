@@ -1,0 +1,1 @@
+export { default as MainLogo } from '@/public/assets/svgs/main-logo.svg'
