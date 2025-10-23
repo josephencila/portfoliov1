@@ -14,8 +14,9 @@ export default function SiteFooter() {
     return (
         <footer className="bg-white dark:bg-black px-6">
             <div className="grid grid-cols-2  border-t border-neutral-300 h-full">
-                <div className="flex items-center ">
-                    <p className="uppercase text-sm md:text-base ">@ {year} {process.env.NEXT_PUBLIC_ABBR_NAME}</p>
+                <div className="flex flex-row items-center gap-1 ">
+                    <span className="mb-1">@</span>
+                    <p className="uppercase text-sm md:text-base "> {year} {process.env.NEXT_PUBLIC_ABBR_NAME}</p>
                 </div>
                 <ListComponent
                     as="ul"
