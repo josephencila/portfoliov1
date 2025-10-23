@@ -5,7 +5,7 @@ import { projectList } from "@/lib/constants/mock-data";
 
 export default function SiteProjects() {
     return (
-        <div id='projects' className='scroll-mt-32 transtion-all  pt-10 xl:pt-12 h-auto last:border-none border-b border-c-dark-main-text  dark:border-c-light-main-text '>
+        <div className='pt-10 h-auto '>
             <div className='flex flex-col gap-6 w-full'>
                 <ListComponent
                     as="ul"
