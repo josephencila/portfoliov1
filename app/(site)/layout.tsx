@@ -1,13 +1,22 @@
 "use client"
+import { useEffect } from "react"
 
 import { useToggleStore } from "@/store/useToggleStore"
+import useScreenSize from "@/lib/hooks/use-screen-size"
 
 import SiteHeader from "@/app/(site)/_components/site-header"
 import SiteRightbar from "@/app/(site)/_components/site-rightbar"
 
 const SiteLayout = ({ children }: { children: React.ReactNode }) => {
 
-    const { isToggled } = useToggleStore()
+    const { isToggled, toggleOff } = useToggleStore()
+    const { width } = useScreenSize()
+
+    useEffect(() => {
+        if (width >= 768) {
+            toggleOff()
+        }
+    }, [width, toggleOff])
 
     return (
         <div className='min-h-full h-auto w-full bg-c-light-bg-1 dark:bg-c-dark-bg-1 flex flex-col items-center  transition-all ease-in-out'>
