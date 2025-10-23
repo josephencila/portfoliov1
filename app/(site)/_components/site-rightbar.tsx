@@ -10,19 +10,22 @@ import { useToggleStore } from "@/store/useToggleStore"
 import { siteNavigations } from "@/lib/constants/navigations"
 
 import ListComponent from "@/components/shared/list.component"
+import useScrollLock from "@/lib/hooks/use-scroll-lock"
 
 
 export default function SiteRightbar() {
 
+
     const { theme, setTheme } = useTheme()
-    const { toggleOff } = useToggleStore()
+    const { isToggled, toggleOff } = useToggleStore()
+    useScrollLock(isToggled)
 
     const handleTheme = () => {
         setTheme(theme === 'light' ? 'dark' : 'light')
     }
 
     return (
-        <aside className="bg-white dark:bg-black px-6 left-0 right-0 bottom-0 top-0 fixed grid grid-rows-[64px_1fr]">
+        <aside className="z-100 bg-white dark:bg-black px-6 left-0 right-0 bottom-0 top-0 fixed grid grid-rows-[64px_1fr]">
             <div className="flex flex-row justify-center items-center w-full border-b border-neutral-300 ">
                 <Link href="/" className="flex flex-row gap-2 items-center w-full group">
                     <MainLogo className=" w-10 h-10 pt-2 fill-neutral-900 hover:fill-neutral-800 dark:fill-neutral-50 dark:hover:fill-neutral-100 transition-colors" />
