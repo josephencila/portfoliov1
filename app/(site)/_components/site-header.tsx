@@ -27,7 +27,7 @@ export default function SiteHeader() {
                         <Link href="/" className="flex flex-row gap-2 items-center w-full group">
                             <MainLogo className=" w-10 h-10 pt-2 fill-neutral-900 hover:fill-neutral-800 dark:fill-neutral-50 dark:hover:fill-neutral-100 transition-colors" />
                             <span className="uppercase text-xl font-semibold hidden md:block text-neutral-900 hover:text-neutral-800 dark:text-neutral-50 dark:hover:text-neutral-100 transition-colors">
-                                Joseph Encila
+                                {process.env.NEXT_PUBLIC_NAME}
                             </span>
                         </Link>
                     </li>

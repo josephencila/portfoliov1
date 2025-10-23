@@ -6,15 +6,14 @@ import { MainLogo } from "@/public/assets/svgs"
 
 import { useTheme } from "next-themes"
 import { useToggleStore } from "@/store/useToggleStore"
+import useScrollLock from "@/lib/hooks/use-scroll-lock"
 
 import { siteNavigations } from "@/lib/constants/navigations"
 
 import ListComponent from "@/components/shared/list.component"
-import useScrollLock from "@/lib/hooks/use-scroll-lock"
 
 
 export default function SiteRightbar() {
-
 
     const { theme, setTheme } = useTheme()
     const { isToggled, toggleOff } = useToggleStore()
@@ -30,7 +29,7 @@ export default function SiteRightbar() {
                 <Link href="/" className="flex flex-row gap-2 items-center w-full group">
                     <MainLogo className=" w-10 h-10 pt-2 fill-neutral-900 hover:fill-neutral-800 dark:fill-neutral-50 dark:hover:fill-neutral-100 transition-colors" />
                     <span className="uppercase text-xl font-semibold hidden md:block text-neutral-900 hover:text-neutral-800 dark:text-neutral-50 dark:hover:text-neutral-100 transition-colors">
-                        Joseph Encila
+                        {process.env.NEXT_PUBLIC_NAME}
                     </span>
                 </Link>
 
