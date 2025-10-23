@@ -1,4 +1,27 @@
-import { IProjectList } from "@/lib/constants/_types/mock-data";
+import { IProjectList, TSocialList } from "@/lib/constants/_types/mock-data";
+
+
+export const socialList: TSocialList[] = [
+
+    {
+        id: '1',
+        name: 'GitHub',
+        url: '/',
+        icon: 'mdi:github',
+    },
+    {
+        id: '2',
+        name: 'LinkedIn',
+        url: '/',
+        icon: 'mdi:linkedin',
+    },
+    {
+        id: '3',
+        name: 'Facebook',
+        url: '/',
+        icon: 'ic:baseline-facebook',
+    },
+]
 
 
 export const projectList: IProjectList[] = [

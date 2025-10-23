@@ -1,3 +1,11 @@
+export type TSocialList = {
+    id: string;
+    name: string;
+    url: string;
+    icon: string;
+}
+
+
 export type TTechnologies = {
     id: string
     icon: string
