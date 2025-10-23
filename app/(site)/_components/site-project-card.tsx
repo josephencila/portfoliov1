@@ -13,7 +13,7 @@ export default function SiteProjectCard({ project }: { project: IProjectList }) 
                         alt={project.title}
                         width={900}
                         height={600}
-                        className="mb-4 rounded-md grayscale transition-all duration-500 ease-in-out group-hover:grayscale-0 border border-transparent"
+                        className="mb-4 hover:-translate-y-2 rounded-md grayscale transition-all duration-500 ease-in-out group-hover:grayscale-0 border border-transparent"
                     />
                     <div>
                         <h3 className="uppercase text-base font-medium xl:text-xl transition-colors duration-300 delay-75 group-hover:text-indigo-400 group-hover:dark:text-indigo-400 text-neutral-900  dark:text-neutral-50">
