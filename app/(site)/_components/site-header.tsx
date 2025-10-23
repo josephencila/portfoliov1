@@ -21,8 +21,8 @@ export default function SiteHeader() {
 
     return (
         <header>
-            <nav className="h-full">
-                <ul className="flex flex-row items-center justify-between px-6 h-full gap-4">
+            <nav className="h-full px-6">
+                <ul className="flex flex-row items-center justify-between  h-full gap-4 border-b border-neutral-300">
                     <li className="flex flex-row justify-center items-center w-full ">
                         <Link href="/" className="flex flex-row gap-2 items-center w-full group">
                             <MainLogo className=" w-10 h-10 pt-2 fill-neutral-900 hover:fill-neutral-800 dark:fill-neutral-50 dark:hover:fill-neutral-100 transition-colors" />
