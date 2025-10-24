@@ -18,12 +18,15 @@ const SiteProjectsPage = async ({ params }: IProjectPage) => {
         .eq("slug", slug)
         .single<TProjectList>()
 
+    if (projectError) throw projectError;
     if (!project) notFound()
 
     const { data: technologies, error: technologiesError } = await supabase
         .from("technologies")
         .select('*')
         .in("id", project?.technologies)
+
+    if (technologiesError) throw technologiesError;
 
     return (
         <div className="flex flex-col px-6 py-8 gap-6 ">
