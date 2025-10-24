@@ -18,8 +18,8 @@ const SiteProjectsPage = async ({ params }: IProjectPage) => {
         .eq("slug", slug)
         .single<TProjectList>()
 
-    if (projectError) throw projectError;
     if (!project) notFound()
+    if (projectError) throw projectError;
 
     const { data: technologies, error: technologiesError } = await supabase
         .from("technologies")
